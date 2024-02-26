@@ -16,4 +16,5 @@ public class MainExtended {
         System.out.println("Czy będziesz testerem?");
         System.out.println(tester);
 }
+
 }
