@@ -1,50 +1,29 @@
 public class User {
     private String name;
-    private int age;
+    private double age;
+    private double height;
 
-    private String pesel;
 
-
-    public User(String firstName, int age) {
-        name = firstName;
+    public User(String name, double age, double height) {
+        this.name = name;
         this.age = age;
+        this.height = height;
     }
 
-    public User(String firstName) {
-        name = firstName;
-    }
-    public User(int age) {
-        this.age = age;
-    }
-
-
-    public void setName(String value){
-        this.name = value;
-
-    }
-    public String getName() {
-        return this.name;
-    }
-    public void setAge(int value){
-        this.age = value;
-
-    }
-    public int getAge() {
-        return this.age;
-    }
-
-    public void setPesel(String value){
-        if(value == null){
-            System.out.println("nie przypisuje ponieważ podałeś wartość pustą!");
-            return;
+    public void checkPerson() {
+        if (this.name != null) {
+            if (this.age > 30 && this.height > 160) {
+                System.out.println("User is older than 30 and taller than 160cm");
+            } else {
+                System.out.println("User is 30 (or younger) or 160cm (or shorter)");
+            }
         }
-        if(value.length() != 11){
-            System.out.println("nie przypisuję, ponieważ nie ma wymaganej liczby cyfr!");
-            return;
-        }
-        this.pesel = value;
     }
-    public String getPesel(){
-        return this.pesel;
-    }
+
+
 }
+
+
+
+
+
