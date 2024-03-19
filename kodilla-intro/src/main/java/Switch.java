@@ -1,26 +1,37 @@
 import java.util.Scanner;
 
 public class Switch {
-    public Switch() {
-
-
-    }
-
-    public static String getLetter() {
-        Scanner letter = new Scanner(System.in);
+    public static String geName() {
+        Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Tell me first letter of color form :)");
-            String firstLetter = letter.nextLine().trim().toUpperCase();
-            switch (firstLetter) {
-                case "B" -> System.out.println("Blue");
-                case "Y" -> System.out.println("Yellow");
-                case "R" -> System.out.println("Red");
-                case "W" -> System.out.println("White");
-                case "P" -> System.out.println("Pink");
-                default -> System.out.println("BRO!Choice difrent letter :) ");
+            System.out.println("Tell me your name");
+            String name = scanner.nextLine().trim().toUpperCase();
+            if (name.length() > 2) {
+                return name;
             }
-            System.out.println();
-
+            System.out.println("Name is too short. Try again.");
+        }
+    }
+    public static String getLetterSelection() {
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.println("Tell me first letter of your favorite of color :)");
+            String firstLetter = scanner.nextLine().trim().toUpperCase();
+            switch (firstLetter) {
+                case "B":
+                    return "Blue";
+                case "Y":
+                    return "Yellow";
+                case "R":
+                    return "Red";
+                case "W":
+                    return "White";
+                case "P":
+                    return "Pink";
+                default:
+                    System.out.println("No no, you have to chose min. one letter. Try again");
+            }
         }
     }
 }
+
