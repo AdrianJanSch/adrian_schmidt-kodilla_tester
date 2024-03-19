@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Switch {
-    public static String geName() {
+    public static String getName() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Tell me your name");
