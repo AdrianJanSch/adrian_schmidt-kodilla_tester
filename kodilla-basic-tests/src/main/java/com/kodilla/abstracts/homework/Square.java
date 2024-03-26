@@ -1,4 +1,6 @@
-package com.kodilla.inheritance.homework;
+package com.kodilla.abstracts.homework;
+
+import com.kodilla.abstracts.homework.Shape;
 
 public class Square extends Shape {
     public Square(){

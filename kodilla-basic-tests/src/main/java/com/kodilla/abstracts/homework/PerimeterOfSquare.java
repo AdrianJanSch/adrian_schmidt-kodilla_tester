@@ -1,6 +1,8 @@
-package com.kodilla.inheritance.homework;
+package com.kodilla.abstracts.homework;
 
-public class PerimeterOfSquare extends Shape  {
+import com.kodilla.abstracts.homework.Shape;
+
+public class PerimeterOfSquare extends Shape {
 
     public PerimeterOfSquare() {
         super(2);

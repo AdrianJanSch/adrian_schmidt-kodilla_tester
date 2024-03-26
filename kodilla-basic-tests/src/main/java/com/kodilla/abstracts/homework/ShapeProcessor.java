@@ -1,4 +1,6 @@
-package com.kodilla.inheritance.homework;
+package com.kodilla.abstracts.homework;
+
+import com.kodilla.abstracts.homework.Shape;
 
 public class ShapeProcessor {
     public void process(Shape shape){

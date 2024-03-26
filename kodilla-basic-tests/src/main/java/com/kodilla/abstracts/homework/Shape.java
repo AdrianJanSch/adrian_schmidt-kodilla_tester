@@ -1,4 +1,4 @@
-package com.kodilla.inheritance.homework;
+package com.kodilla.abstracts.homework;
 
 public abstract class Shape {
     private int a;
