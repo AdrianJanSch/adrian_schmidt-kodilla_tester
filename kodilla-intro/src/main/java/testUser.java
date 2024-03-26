@@ -1,5 +1,5 @@
-public class testUser {
-    public static void main(String[] args) {
+//* public class testUser {
+  /*  public static void main(String[] args) {
         User u1 = new User("Jacek", 21);
 
         User u2 = new User("Paweł");
@@ -35,7 +35,7 @@ public class testUser {
         }
     }
 
-}
+}*/
 
 
 //      User u = list[i];
