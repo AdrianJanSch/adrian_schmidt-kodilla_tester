@@ -11,16 +11,8 @@ public abstract class Shape {
         return a;
     }
 
-    public int SurfaceArea() {
-        int result = a * a;
-        return result;
-    }
-    public int Perimeter(){
-        int result = a + a + a +a;
-        return result;
-    }
+    public abstract int math();
 
-    public abstract int Result ();
 
 }
 
