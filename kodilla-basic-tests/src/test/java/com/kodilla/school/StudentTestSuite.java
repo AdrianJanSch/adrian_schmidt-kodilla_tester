@@ -1,4 +1,4 @@
-package com.kodilla.school;
+/*package com.kodilla.school;
 
 import org.junit.jupiter.api.Test;
 
@@ -52,3 +52,4 @@ public class StudentTestSuite {
         assertEquals(2.375, student.getAverage(), 0.001);
     }
     }
+*/

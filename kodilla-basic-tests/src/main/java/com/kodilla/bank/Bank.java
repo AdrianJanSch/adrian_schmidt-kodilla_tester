@@ -1,9 +1,10 @@
 package com.kodilla.bank;
 
+import javax.swing.plaf.IconUIResource;
 import java.util.ArrayList;
 
 public class Bank {
-    private final CashMachine[] cashMachines;
+    private  CashMachine[] cashMachines;
 
     public Bank(int cashMachinesCount) {
         this.cashMachines = new CashMachine[cashMachinesCount];
@@ -17,6 +18,9 @@ public class Bank {
             sum += cashMachine.getSaldo();
         }
         return sum;
+    }
+    public void getCashMachine(){
+        System.out.println(cashMachines);
     }
 
    /*public int getTotalWithdrawal(){

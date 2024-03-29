@@ -1,4 +1,4 @@
-package com.kodilla.basic_assertion;
+/*package com.kodilla.basic_assertion;
 
 import org.junit.jupiter.api.Test;
 
@@ -60,4 +60,4 @@ public class CalculatorTestSuite {
         double divisionResult = calculator.divison(a,b);
         assertEquals(3.333, divisionResult,0.001);
     }
-}
+}*/

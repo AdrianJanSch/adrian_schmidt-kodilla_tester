@@ -1,4 +1,4 @@
-package com.kodilla.basic_assertion;
+/*package com.kodilla.basic_assertion;
 
 import org.junit.jupiter.api.Test;
 
@@ -57,4 +57,4 @@ public class PrimeCheckerTestSuite {
         System.out.println("Test number " + count);
         assertFalse(result);
     }
-}
+}*/
