@@ -1,80 +1,74 @@
 package com.kodilla.bank;
 
 public class CashMachine {
-    private int[] cashMachine;
-    private int size;
-    private int saldo;
-    private int transaction;
-    private int sumWithdrawal;
-    private int sumDeposit;
+    private int[] transactions;
+
 
     public CashMachine() {
-        this.cashMachine = new int[this.size];
-        this.size = 0;
-        this.transaction = 0;
-        this.saldo = 0;
-        this.sumWithdrawal = 0;
-        this.sumDeposit = 0;
-
+        this.transactions = new int[0];
 
     }
-    public int saldo() {
-        return this.saldo;
-    }
 
-    public int deposit(int deposit){
-        this.cashMachine = new int[this.size];
-        this.transaction++;
-        this.size++;
-        this.sumDeposit++;
-        int i =this.transaction;
-        for (i = this.transaction; i<this.size; i++ ){
-            this.cashMachine [i] = this.size;
+    public int getBalacne() {
+        int sum = 0;
+        for (int i = 0; i < this.transactions.length; i++) {
+            sum += this.transactions[i];
         }
-        this.saldo += deposit;
-        return deposit;
+        return sum;
     }
 
-    public void ShowTotalDepositTransaction(){
-        System.out.println(sumDeposit);
-    }
-    //    public int deposit(int value) {
-//        this.size++;
-//        int[] newTab = new int[this.size];
-//        System.arraycopy(values, 0, newTab, 0, values.length);
-//        newTab[this.size - 1] = value;
-//        this.values = newTab;
-//        this.saldo = this.saldo + value;
-//        return this.saldo;
-//    }
-
-    public int withdrawal(int withdrawal) {
-        this.size++;
-        this.transaction++;
-        this.sumWithdrawal++;
-        this.cashMachine = new int[this.size];
-        int i = this.transaction    ;
-        for (i = this.transaction; i <this.size; i++){
-            this.cashMachine [i] = this.size;
+    public int getDepositBalacne() {
+        int sum = 0;
+//        for (int i = 0; i < this.transactions.length; i++) {         <------//Przykład, dla rozwiązania niżej
+//            int item = this.transactions[i];
+//            if (item > 0)
+//                sum += item;
+//        }
+        for (int item : this.transactions){
+            if(item > 0)
+                sum += item;
         }
-        this.saldo -=  withdrawal;
-        return withdrawal;
+        return sum;
     }
 
-    public void showWithdrawalTotalTransaction(){
-        System.out.println(sumWithdrawal);
+    public int getWithdrawalBalacne() {
+        int sum = 0;
+//        for (int i = 0; i < this.transactions.length; i++) {
+//            if (this.transactions[i] < 0)
+//                sum += this.transactions[i];
+//        }
+        for(int item : this.transactions)
+            if (item < 0)
+                sum+= item;
+        return sum * (-1);
     }
-    public void showCashMachine() {
-        System.out.println(this.size);
+
+    public int getTransactionsCount() {
+        return this.transactions.length;
+    }
+    public int getWithdrawalCount() {
+        int count = 0;
+        for (int item : this.transactions){
+            if(item < 0)
+                count += 1;
+        }
+        return count;
+    }
+    public int getDepositCount() {
+        int count = 0;
+        for (int item : this.transactions){
+            if(item > 0)
+                count += 1;
+        }
+        return count;
+    }
+    public void addNewTransaction(int value){
+        int [] newTab = new int[transactions.length + 1];
+        System.arraycopy(this.transactions, 0, newTab, 0, this.transactions.length);
+        newTab [newTab.length - 1] = value;
+        this.transactions = newTab;
+    }
 
 
-    }
-    public int getTransaction(){
-       return transaction;
-    }
-
-      public int getSaldo(){
-        return saldo;
-    }
 
 }
