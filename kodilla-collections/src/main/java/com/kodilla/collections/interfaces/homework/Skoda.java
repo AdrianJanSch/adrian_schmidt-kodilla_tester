@@ -1,13 +1,16 @@
 package com.kodilla.collections.interfaces.homework;
 
+import java.util.Random;
+
 public class Skoda implements Car {
     private int speed;
     private double engine;
     private String name;
-    public Skoda(double engine, int speed, String name){
-        this.engine = engine;
-        this.speed = speed;
-        this.name = name;
+    private static final Random RANDOM = new Random();
+    public Skoda( ){
+        this.engine = RANDOM.nextDouble(3.0);
+        this.speed = RANDOM.nextInt(300);
+        this.name = "Skoda";
     }
 
     @Override
@@ -23,7 +26,10 @@ public class Skoda implements Car {
 
 
     }
-
+    @Override
+    public String getName() {
+        return this.name;
+    }
     @Override
     public void decreaseSpeed() {
         int decrease = this.speed/ 10;

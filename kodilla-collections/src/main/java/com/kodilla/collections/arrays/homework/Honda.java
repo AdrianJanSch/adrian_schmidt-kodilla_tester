@@ -1,17 +1,19 @@
-package com.kodilla.collections.interfaces.homework;
+package com.kodilla.collections.arrays.homework;
+
+import com.kodilla.collections.interfaces.homework.Car;
 
 import java.util.Random;
 
-public class Opel implements Car {
+public class Honda implements Car {
     private int speed;
     private double engine;
     private String name;
     private static final Random RANDOM = new Random();
 
-    public Opel() {
+    public Honda() {
         this.engine = RANDOM.nextDouble(3.0);
         this.speed = RANDOM.nextInt(300);
-        this.name = "Ford";
+        this.name = "Honda";
     }
 
     @Override
