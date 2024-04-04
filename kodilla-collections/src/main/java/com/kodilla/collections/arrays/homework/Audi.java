@@ -2,6 +2,7 @@ package com.kodilla.collections.arrays.homework;
 
 import com.kodilla.collections.interfaces.homework.Car;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Audi implements Car {
@@ -11,8 +12,8 @@ public class Audi implements Car {
     private static final Random RANDOM = new Random();
 
     public Audi() {
-        this.engine = RANDOM.nextDouble(3.0);
-        this.speed = RANDOM.nextInt(300);
+        this.engine = 1.5;// RANDOM.nextDouble(3.0);
+        this.speed =10;// RANDOM.nextInt(300);
         this.name = "Audi";
     }
 
@@ -38,5 +39,18 @@ public class Audi implements Car {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Audi audi = (Audi) o;
+        return speed == audi.speed && Double.compare(engine, audi.engine) == 0 && Objects.equals(name, audi.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(speed, engine, name);
     }
 }
