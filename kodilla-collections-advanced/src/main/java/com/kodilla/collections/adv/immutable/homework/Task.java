@@ -1,6 +1,6 @@
 package com.kodilla.collections.adv.immutable.homework;
 
-public  record Task (String title, int duraction) {
+public  record Task (String title, int duration) {
 
 
 }
