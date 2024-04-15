@@ -16,9 +16,7 @@ class FlightFinderTest {
         List<Flight> list = flightFinder.findFlightsFrom("Katowice");
         //then
         assertEquals(2,list.size() );
-
     }
-
     @Test
     void findFlightsTo() {
         //given
@@ -27,6 +25,5 @@ class FlightFinderTest {
         List<Flight> list = flightFinder.findFlightsTo("Kraków");
         //then
         assertEquals(2,list.size() );
-
     }
 }

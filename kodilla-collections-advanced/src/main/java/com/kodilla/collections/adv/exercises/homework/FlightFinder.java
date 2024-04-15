@@ -14,7 +14,6 @@ public class FlightFinder {
         }
         return newList;
     }
-
     public List<Flight> findFlightsTo(String arrival) {
         List<Flight> results = new ArrayList<>();
         for (Flight flight : FlightRespository.getFlightsTable()) {
@@ -22,7 +21,6 @@ public class FlightFinder {
                 results.add(flight);
         }
         return results;
-
     }
 }
 
