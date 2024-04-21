@@ -2,6 +2,7 @@ package com.kodilla.stream;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class UsersRepository {
     public static List<User> getUsersList() {
@@ -14,4 +15,6 @@ public class UsersRepository {
         users.add(new User("Mike Ehrmantraut", 57, 0, "Security"));
         return users;
     }
+
+
 }

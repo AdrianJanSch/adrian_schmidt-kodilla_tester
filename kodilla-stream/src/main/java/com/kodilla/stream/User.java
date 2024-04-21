@@ -32,6 +32,7 @@ public class User {
         return group;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,5 +44,15 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(userName, age, numberOfPost, group);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", age=" + age +
+                ", numberOfPost=" + numberOfPost +
+                ", group='" + group + '\'' +
+                '}';
     }
 }
