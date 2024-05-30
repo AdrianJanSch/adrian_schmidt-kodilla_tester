@@ -50,21 +50,5 @@ class ExternalApiRestAssuredTest {
 
     }
 
-    @Test
-    void testResp(){
-        Map<String,Object> data = new HashMap<>();
-        data.put("name","aaa" );
-        data.put("job","bbb" );
-
-        given().
-                header("Content-Type", "application/json").
-                body(data).
-                when().
-                put("https://reqres.in/api/users/2").
-                then().
-                statusCode(200).log().all();
-
-
-    }
 
 }
