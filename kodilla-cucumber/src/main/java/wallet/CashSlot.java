@@ -10,4 +10,6 @@ public class CashSlot {
     public void dispense(int amount) {
         this.contents = amount;
     }
+
+
 }
