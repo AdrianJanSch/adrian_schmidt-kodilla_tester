@@ -16,7 +16,7 @@ public class KodillaLoginPom extends AbstractPom {
     @FindBy(xpath = "//button[contains(text(), 'Log in')]")
     WebElement loginButton;
 
-//    WebDriver driver;
+
 
     public KodillaLoginPom(WebDriver driver) {
         super(driver);
