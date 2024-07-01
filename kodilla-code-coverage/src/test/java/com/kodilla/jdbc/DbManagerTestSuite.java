@@ -99,13 +99,10 @@ class DbManagerTestSuite {
         Statement statement = createStatement();
         ResultSet rs = statement.executeQuery(countQuery);
 
-
         int counter = 0;
         while (rs.next()) {
-            rs.getString("FIRSTNAME");
-            rs.getString("LASTNAME");
+            System.out.println(rs.getString("FIRSTNAME") + " " + rs.getString("LASTNAME"));
             counter++;
-
         }
         int expected =  3;
 
@@ -113,7 +110,6 @@ class DbManagerTestSuite {
         statement.close();
 
         Assertions.assertEquals(expected, counter);
-
 
     }
 }
